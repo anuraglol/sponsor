@@ -46,9 +46,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col items-center w-screen sm:items-start sm:w-auto sm:h-auto">
-        <div className="relative h-16 w-60">
-          <Image src="/logo.svg" alt="logo" layout="fill" objectFit="contain" />
-        </div>
+      
         <div className="sm:w-[436px] w-[90vw] z-50 mt-10 flex flex-col space-y-5 shadow-xl rounded-md items-center px-5 sm:px-10 p-10 bg-white/10">
           <h2 className="text-3xl font-semibold font-ClashDisplay text-accent">
             Love what I do? Feel free to support me with a donation!

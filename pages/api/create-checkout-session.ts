@@ -1,11 +1,9 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 import data from "../../public/data.json";
 
-const URL =
-  process.env.NODE_ENV === "development" ? "http://localhost:3000" : data.url;
-
 const handler = async (req: any, res: any) => {
   const { amount } = req.body;
+  const URL = req.headers.origin
 
   const transformedItems = [
     {
