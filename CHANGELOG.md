@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/kr-anurag/sponsor/compare/v1.2.1...v1.3.0) (2022-02-01)
+
+
+### Features
+
+* seo ([d3f1bbd](https://github.com/kr-anurag/sponsor/commit/d3f1bbd980a74d44bbcdbcf23df39982ca3bb1dc))
+
+
+
 ## [1.2.1](https://github.com/kr-anurag/sponsor/compare/v1.2.0...v1.2.1) (2022-02-01)
 
 
