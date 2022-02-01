@@ -3,6 +3,8 @@ import "../styles/globals.css";
 import { NextSeo } from "next-seo";
 import data from "../public/data.json";
 
+import { ChakraProvider } from "@chakra-ui/react";
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -31,7 +33,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           cardType: "summary_large_image",
         }}
       />
-      <Component {...pageProps} />
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>
     </>
   );
 }

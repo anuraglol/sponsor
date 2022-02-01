@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         ClashDisplay: ["ClashDisplay-Variable"],
+        poppins: ["Poppins", "sans-serif"]
       },
       colors: {
         accent: "#52DEE5",
