@@ -9,7 +9,6 @@ import {
   HStack,
   Center,
 } from "@chakra-ui/react";
-import { useState } from "react";
 
 interface props {
   amount: any;
