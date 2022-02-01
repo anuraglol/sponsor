@@ -1,5 +1,5 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
-import data from "../../public/data.json";
+// import data from "../../public/data.json";
 
 const handler = async (req: any, res: any) => {
   const { amount } = req.body;
@@ -8,9 +8,9 @@ const handler = async (req: any, res: any) => {
   const transformedItems = [
     {
       price_data: {
-        currency: data.currency.toLowerCase() || "inr",
+        currency: "inr",
         product_data: {
-          name: `Sponsoring ${data.name}`,
+          name: `Sponsoring Anurag`,
         },
         unit_amount: amount * 100,
       },
