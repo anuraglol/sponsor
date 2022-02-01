@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/kr-anurag/sponsor/compare/v1.2.0...v1.2.1) (2022-02-01)
+
+
+### Bug Fixes
+
+* remove og data for now ([85f85a9](https://github.com/kr-anurag/sponsor/commit/85f85a91f2b62b1e83005b28407717e6df881cc7))
+
+
+
 # [1.2.0](https://github.com/kr-anurag/sponsor/compare/v1.1.0...v1.2.0) (2022-02-01)
 
 
