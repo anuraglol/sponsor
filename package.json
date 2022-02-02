@@ -1,5 +1,11 @@
 {
-  "private": true,
+  "version": "1.4.0",
+  "name": "sponsor",
+  "description": "A sponsors site built by Anurag, using stripe",
+  "main": "index.js",
+  "repository": "https://github.com/kr-anurag/sponsor.git",
+  "author": "Anurag <kr.anurag24@gmail.com>",
+  "license": "GPL-3",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -38,6 +44,5 @@
     "standard-version": "^9.3.2",
     "tailwindcss": "^3.0.15",
     "typescript": "^4.5.5"
-  },
-  "version": "1.4.0"
+  }
 }
