@@ -1,10 +1,17 @@
+import { Box, Heading } from "@chakra-ui/react";
+
 const success = () => {
   return (
-    <div className="font-poppins flex flex-col w-screen min-h-screen overflow-x-hidden bg-red-100 justify-center items-center">
-      <h2 className="text-black text-3xl font-semibold">
-        Thank you for sponsoring me! 💙
-      </h2>
-    </div>
+    <Box
+      className="min-h-screen min-w-screen"
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      overflowX="hidden"
+      bgColor="red.100"
+    >
+      <Heading as="h2" fontWeight="semibold">Thank you for sponsoring me! 💙</Heading>
+    </Box>
   );
 };
 

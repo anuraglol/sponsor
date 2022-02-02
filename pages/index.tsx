@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 
 import { Checkout } from "../components";
-import { Box, Text, Button, Link } from "@chakra-ui/react";
+import { Box, Text, Button, Flex } from "@chakra-ui/react";
+import Link from "next/link";
 
 import axios from "axios";
 import { useState } from "react";
@@ -33,8 +34,20 @@ const App: NextPage = () => {
   };
 
   return (
-    <div className="h-screen w-screen bg-red-100 font-poppins flex flex-row justify-between items-center px-32">
-      <Box lineHeight="short" position="absolute">
+    <Box
+      className="min-h-screen min-w-screen"
+      display="flex"
+      flexDir={{ base: "column", lg: "row" }}
+      columnGap="10"
+      justifyContent={{ base: "", lg: "space-between" }}
+      alignItems="center"
+      overflowX="hidden"
+      bgColor="red.100"
+      px="32"
+      gap="10"
+    >
+      <Box lineHeight="short">
+        <Text fontSize="2xl">👋</Text>
         <Text fontWeight="bold" textColor="orange.500" fontSize="2xl">
           Anurag
         </Text>
@@ -46,27 +59,21 @@ const App: NextPage = () => {
           No matter how little it might be, it helps!
         </Text>
 
-        <Link href="https://anurag.tech" isExternal>
-          <Button
-            colorScheme="orange"
-            textColor="white"
-            fontWeight="medium"
-            mt="8"
-            borderRadius="full"
-            borderBottomRightRadius="0"
-            p="4"
-            py="6"
-            position="absolute"
-            _hover={{
-              marginTop: "12",
-            }}
-            style={{
-              transition: "all",
-              transitionDuration: "200ms",
-            }}
-          >
-            Checkout my Portfolio
-          </Button>
+        <Link href="https://anurag.tech" passHref>
+          <a target="_blank">
+            <Button
+              colorScheme="orange"
+              textColor="white"
+              fontWeight="medium"
+              mt="8"
+              borderRadius="full"
+              borderBottomRightRadius="0"
+              p="4"
+              py="6"
+            >
+              Checkout my Portfolio
+            </Button>
+          </a>
         </Link>
       </Box>
       <Checkout
@@ -77,7 +84,7 @@ const App: NextPage = () => {
         checkoutSession={checkoutSession}
         defaultAmounts={defaultAmounts}
       />
-    </div>
+    </Box>
   );
 };
 

@@ -41,21 +41,13 @@ const Checkout: FC<props> = ({
         bgColor="#ffffffd4"
         rounded="md"
         boxShadow="md"
-        position="fixed"
-        right="0"
-        marginRight="32"
         display="flex"
         justifyContent="center"
         flexDir="column"
         gap="8"
         shadow="md"
       >
-        <InputGroup
-          display="flex"
-          flexDir="row"
-          alignItems="center"
-          justifyItems="center"
-        >
+        <InputGroup>
           <InputLeftAddon>INR</InputLeftAddon>
           <Input
             w="full"
