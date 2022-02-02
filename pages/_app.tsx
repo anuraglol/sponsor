@@ -1,5 +1,4 @@
 import { AppProps } from "next/app";
-import "../styles/globals.css";
 import { NextSeo } from "next-seo";
 
 import { ChakraProvider } from "@chakra-ui/react";
