@@ -35,7 +35,6 @@ const App: NextPage = () => {
 
   return (
     <Box
-      className="min-h-screen min-w-screen"
       display="flex"
       flexDir={{ base: "column", lg: "row" }}
       columnGap="10"
@@ -45,6 +44,7 @@ const App: NextPage = () => {
       bgColor="red.100"
       px="32"
       gap="10"
+      height="100vh"
     >
       <Box lineHeight="short">
         <Text fontSize="2xl">👋</Text>
