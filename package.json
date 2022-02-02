@@ -1,5 +1,5 @@
 {
-  "version": "1.4.1",
+  "version": "1.4.2",
   "name": "sponsor",
   "description": "A sponsors site built by Anurag, using stripe",
   "main": "index.js",

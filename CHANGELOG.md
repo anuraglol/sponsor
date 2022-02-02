@@ -1,3 +1,13 @@
+## [1.4.2](https://github.com/kr-anurag/sponsor/compare/v1.4.1...v1.4.2) (2022-02-02)
+
+
+### Bug Fixes
+
+* chakra ui ([ab3a61c](https://github.com/kr-anurag/sponsor/commit/ab3a61cf5e13ab4ecf30c4af4c7789ef35e0c3d1))
+* success page ([21816e4](https://github.com/kr-anurag/sponsor/commit/21816e4e31437098bd2c6ddc1a964789c0481712))
+
+
+
 ## [1.4.1](https://github.com/kr-anurag/sponsor/compare/v1.4.0...v1.4.1) (2022-02-02)
 
 
@@ -31,15 +41,6 @@
 ### Features
 
 * seo ([d3f1bbd](https://github.com/kr-anurag/sponsor/commit/d3f1bbd980a74d44bbcdbcf23df39982ca3bb1dc))
-
-
-
-## [1.2.1](https://github.com/kr-anurag/sponsor/compare/v1.2.0...v1.2.1) (2022-02-01)
-
-
-### Bug Fixes
-
-* remove og data for now ([85f85a9](https://github.com/kr-anurag/sponsor/commit/85f85a91f2b62b1e83005b28407717e6df881cc7))
 
 
 
