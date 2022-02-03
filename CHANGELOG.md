@@ -1,3 +1,12 @@
+## [1.4.3](https://github.com/kr-anurag/sponsor/compare/v1.4.2...v1.4.3) (2022-02-03)
+
+
+### Bug Fixes
+
+* fix font ([a67543a](https://github.com/kr-anurag/sponsor/commit/a67543aed0e015d882a6b624e408515f9169dc41))
+
+
+
 ## [1.4.2](https://github.com/kr-anurag/sponsor/compare/v1.4.1...v1.4.2) (2022-02-02)
 
 
@@ -32,15 +41,6 @@
 ### Bug Fixes
 
 * fix error ([9146525](https://github.com/kr-anurag/sponsor/commit/9146525de7103a45a686551d7fcdf6f9674c4e92))
-
-
-
-# [1.3.0](https://github.com/kr-anurag/sponsor/compare/v1.2.1...v1.3.0) (2022-02-01)
-
-
-### Features
-
-* seo ([d3f1bbd](https://github.com/kr-anurag/sponsor/commit/d3f1bbd980a74d44bbcdbcf23df39982ca3bb1dc))
 
 
 
