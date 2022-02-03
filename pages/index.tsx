@@ -43,8 +43,10 @@ const App: NextPage = () => {
       overflowX="hidden"
       bgColor="red.100"
       px="32"
+      py="10"
       gap="10"
       height="100vh"
+      fontFamily="Poppins"
     >
       <Box lineHeight="short">
         <Text fontSize="2xl">👋</Text>

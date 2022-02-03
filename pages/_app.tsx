@@ -3,6 +3,7 @@ import { NextSeo } from "next-seo";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../styles/theme";
+import "@fontsource/poppins"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
