@@ -6,7 +6,7 @@ This is a sponsor page built with Stripe to accept donations.
 
 ### 🌟 Tech Stack
 
-- NexttJS
+- NextJS
 - Typescript
 - Chakra UI
 - Stripe
