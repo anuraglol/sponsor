@@ -10,23 +10,35 @@ import {
   Center,
 } from "@chakra-ui/react";
 
-interface props {
-  amount: any;
-  loading: boolean;
-  defaultAmounts: number[];
-  setLoading: any;
-  setAmount: any;
-  checkoutSession: any;
-}
+import axios from "axios";
+import { useState } from "react";
+import { loadStripe } from "@stripe/stripe-js";
 
-const Checkout: FC<props> = ({
-  amount,
-  loading,
-  setAmount,
-  setLoading,
-  checkoutSession,
-  defaultAmounts,
-}) => {
+const stripePromise = loadStripe(process.env.stripe_public_key!);
+
+const Checkout: FC = () => {
+  const [amount, setAmount] = useState<number>();
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const defaultAmounts = [100, 250, 500];
+
+  const checkoutSession = async () => {
+    const stripe = await stripePromise;
+
+    const checkoutSession = await axios.post("/api/create-checkout-session", {
+      amount: amount,
+    });
+
+    const result = await stripe?.redirectToCheckout({
+      sessionId: checkoutSession.data.id,
+    });
+
+    if (result?.error) {
+      alert(result?.error.message);
+      setLoading(false);
+    }
+  };
+
   const handleClick = () => {
     setLoading(true);
     checkoutSession();
