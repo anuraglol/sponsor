@@ -1,57 +1,158 @@
 import type { NextPage } from "next";
 
-import { Checkout } from "../components";
-import { Box, Text, Button } from "@chakra-ui/react";
-import Link from "next/link";
+import axios from "axios";
+import { useState } from "react";
+import { loadStripe } from "@stripe/stripe-js";
+
+const stripePromise = loadStripe(process.env.stripe_public_key!);
+
+import {
+  Box,
+  Button,
+  Input,
+  Text,
+  InputGroup,
+  InputLeftAddon,
+  Link,
+  HStack,
+} from "@chakra-ui/react";
+
+import { BiRupee } from "react-icons/bi";
 
 const App: NextPage = () => {
-  return (
-    <Box
-      display="flex"
-      flexDir={{ base: "column", lg: "row" }}
-      columnGap="10"
-      justifyContent={{ base: "", lg: "space-between" }}
-      alignItems="center"
-      overflowX="hidden"
-      bgColor="red.100"
-      px="32"
-      py="10"
-      gap="10"
-      height="100vh"
-      fontFamily="Poppins"
-    >
-      <Box lineHeight="short">
-        <Text fontSize="2xl">👋</Text>
-        <Text fontWeight="bold" textColor="orange.500" fontSize="2xl">
-          Anurag
-        </Text>
-        <Text fontSize="5xl" fontWeight="bold" textColor="blackAlpha.800">
-          Love my work?
-        </Text>
-        <Text fontSize="xl" fontWeight="medium">
-          Feel free to support me with a donation. <br />
-          No matter how little it might be, it helps!
-        </Text>
+  const [amount, setAmount] = useState<number>();
+  const [loading, setLoading] = useState<boolean>(false);
 
-        <Link href="https://anurag.tech" passHref>
-          <a target="_blank">
+  const defaultAmounts = [100, 250, 500];
+
+  const checkoutSession = async () => {
+    const stripe = await stripePromise;
+
+    const checkoutSession = await axios.post("/api/create-checkout-session", {
+      amount: amount,
+    });
+
+    const result = await stripe?.redirectToCheckout({
+      sessionId: checkoutSession.data.id,
+    });
+
+    if (result?.error) {
+      alert(result?.error.message);
+      setLoading(false);
+    }
+  };
+
+  const handleClick = () => {
+    setLoading(true);
+    checkoutSession();
+  };
+
+  return (
+    <>
+      <Box
+        minH="100vh"
+        minW="100vw"
+        bgGradient="linear(to-l, #531CB3, #944BBB)"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        fontFamily="inter"
+      >
+        <Box
+          bgColor="white"
+          rounded="md"
+          py="12"
+          px="28"
+          display="flex"
+          flexDir="column"
+          rowGap={4}
+          justifyContent="center"
+        >
+          <Text
+            fontSize="2xl"
+            textColor="gray.800"
+            fontWeight="semibold"
+            textAlign="center"
+          >
+            Love my work? <br />
+            Sponsor Me!
+          </Text>
+
+          <Text fontWeight="medium" textColor="gray.600" textAlign="center">
+            feel free to support me with a donation!
+          </Text>
+
+          <InputGroup mt="2">
+            <InputLeftAddon>
+              <BiRupee size="24" />
+            </InputLeftAddon>
+            <Input
+              w="80"
+              type="number"
+              placeholder="enter an amount..."
+              value={amount}
+              onChange={(e: any) => setAmount(e.target.value)}
+            />
+          </InputGroup>
+
+          <HStack w="full" spacing="4" justifyContent="center">
+            {defaultAmounts?.map((btnAmount: number) => (
+              <Box
+                py="1"
+                px="6"
+                rounded="full"
+                fontSize="lg"
+                fontWeight="500"
+                textColor={amount === btnAmount ? "white" : "black"}
+                bgColor={amount === btnAmount ? "purple.500" : "gray.100"}
+                cursor="pointer"
+                onClick={() => setAmount(btnAmount)}
+                key={btnAmount}
+              >
+                {btnAmount}
+              </Box>
+            ))}
+          </HStack>
+
+          <Box display="flex" justifyContent="center">
             <Button
-              colorScheme="orange"
+              mt="4"
+              colorScheme="purple"
               textColor="white"
               fontWeight="medium"
-              mt="8"
-              borderRadius="full"
-              borderBottomRightRadius="0"
-              p="4"
-              py="6"
+              w="80"
+              isLoading={loading}
+              onClick={handleClick}
             >
-              Checkout my Portfolio
+              checkout
             </Button>
-          </a>
-        </Link>
+          </Box>
+          <Text fontSize="14px" textColor="gray.500" textAlign="center">
+            crafted by anurag,{" "}
+            <Link textColor="gray.700" href="https://www.anurag.tech">
+              portfolio
+            </Link>{" "}
+            <br />
+            this website is open source on{" "}
+            <Link
+              textColor="gray.700"
+              href="https://www.github.com/kr-anurag/sponsor"
+            >
+              github
+            </Link>{" "}
+            <br />
+            powered by{" "}
+            <Link textColor="gray.700" href="https://www.stripe.com">
+              stripe
+            </Link>{" "}
+            and hosted on{" "}
+            <Link textColor="gray.700" href="https://www.vercel.com">
+              vercel
+            </Link>
+          </Text>
+        </Box>
       </Box>
-      <Checkout />
-    </Box>
+    </>
   );
 };
 
