@@ -7,10 +7,14 @@ const success = () => {
       alignItems="center"
       justifyContent="center"
       overflowX="hidden"
-      bgColor="red.100"
+      bgGradient="linear(to-l, #531CB3, #944BBB)"
       height="100vh"
+      fontFamily="inter"
+      textColor="white"
     >
-      <Heading as="h2" fontWeight="semibold">Thank you for sponsoring me! 💙</Heading>
+      <Heading as="h2" fontWeight="semibold">
+        Thank you for sponsoring me!{" "} 
+      </Heading>
     </Box>
   );
 };

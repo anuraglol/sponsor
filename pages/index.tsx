@@ -13,7 +13,6 @@ import {
   Text,
   InputGroup,
   InputLeftAddon,
-  Flex,
   Link,
   HStack,
 } from "@chakra-ui/react";
