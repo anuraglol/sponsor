@@ -123,6 +123,7 @@ const App: NextPage = () => {
               w="80"
               isLoading={loading}
               onClick={handleClick}
+              disabled={ amount ? false : true }
             >
               checkout
             </Button>
