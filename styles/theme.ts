@@ -2,7 +2,7 @@ import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   fonts: {
-    poppins: "Poppins"
+    inter: "Inter, sans-serif"
   },
 });
 

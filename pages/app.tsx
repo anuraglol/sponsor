@@ -129,27 +129,12 @@ const App: NextPage = () => {
             </Button>
           </Box>
           <Text fontSize="14px" textColor="gray.500" textAlign="center">
-            crafted by anurag,{" "}
-            <Link textColor="gray.700" href="https://www.anurag.tech">
-              portfolio
-            </Link>{" "}
+            crafted by anurag, <Link textColor="gray.700">portfolio</Link>{" "}
             <br />
             this website is open source on{" "}
-            <Link
-              textColor="gray.700"
-              href="https://www.github.com/kr-anurag/sponsor"
-            >
-              github
-            </Link>{" "}
-            <br />
-            powered by{" "}
-            <Link textColor="gray.700" href="https://www.stripe.com">
-              stripe
-            </Link>{" "}
-            and hosted on{" "}
-            <Link textColor="gray.700" href="https://www.vercel.com">
-              vercel
-            </Link>
+            <Link textColor="gray.700">github</Link> <br />
+            powered by <Link textColor="gray.700">stripe</Link> and hosted on{" "}
+            <Link textColor="gray.700">vercel</Link>
           </Text>
         </Box>
       </Box>
