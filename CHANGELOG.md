@@ -1,3 +1,12 @@
+# [1.5.0](https://github.com/kr-anurag/sponsor/compare/v1.4.3...v1.5.0) (2022-03-03)
+
+
+### Features
+
+* redesigned whole website ([28a8b48](https://github.com/kr-anurag/sponsor/commit/28a8b481d7974e737473ced2b54ab7fba55981f4))
+
+
+
 ## [1.4.3](https://github.com/kr-anurag/sponsor/compare/v1.4.2...v1.4.3) (2022-02-03)
 
 
@@ -32,15 +41,6 @@
 ### Features
 
 * fix reponsiveness, remove tw[WIP] ([bb7df10](https://github.com/kr-anurag/sponsor/commit/bb7df10aecb015b469935cc92bc25271fa88c02d))
-
-
-
-## [1.3.1](https://github.com/kr-anurag/sponsor/compare/v1.3.0...v1.3.1) (2022-02-01)
-
-
-### Bug Fixes
-
-* fix error ([9146525](https://github.com/kr-anurag/sponsor/commit/9146525de7103a45a686551d7fcdf6f9674c4e92))
 
 
 
