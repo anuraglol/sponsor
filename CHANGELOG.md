@@ -1,3 +1,12 @@
+## [1.5.1](https://github.com/kr-anurag/sponsor/compare/v1.5.0...v1.5.1) (2022-03-03)
+
+
+### Bug Fixes
+
+* fix button active state ([cfa83aa](https://github.com/kr-anurag/sponsor/commit/cfa83aa11cfdfc8c0bdb8a670a0e0b2c76469bd4))
+
+
+
 # [1.5.0](https://github.com/kr-anurag/sponsor/compare/v1.4.3...v1.5.0) (2022-03-03)
 
 
@@ -32,15 +41,6 @@
 ### Bug Fixes
 
 * fix license value ([ad68c1f](https://github.com/kr-anurag/sponsor/commit/ad68c1f5ee9a5e55faaf695f8aa7c3f9c82f67cf))
-
-
-
-# [1.4.0](https://github.com/kr-anurag/sponsor/compare/v1.3.1...v1.4.0) (2022-02-02)
-
-
-### Features
-
-* fix reponsiveness, remove tw[WIP] ([bb7df10](https://github.com/kr-anurag/sponsor/commit/bb7df10aecb015b469935cc92bc25271fa88c02d))
 
 
 
