@@ -1,6 +1,6 @@
 # Welcome to Sponsor Template
 
-![website](https://user-images.githubusercontent.com/77309809/152326564-00a1f8d2-109d-4824-bad7-fdf3dd1f0170.png)
+![website](https://user-images.githubusercontent.com/77309809/156585697-38ad83f0-562e-4073-b29d-b5c96677fecb.png)
 
 This is a sponsor page built with Stripe to accept donations.
 
