@@ -15,13 +15,21 @@ import {
   InputLeftAddon,
   Link,
   HStack,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Flex,
 } from "@chakra-ui/react";
 
 import { BiRupee } from "react-icons/bi";
+import { IoLogoUsd, IoIosArrowDown } from "react-icons/io";
 
 const App: NextPage = () => {
   const [amount, setAmount] = useState<number>();
   const [loading, setLoading] = useState<boolean>(false);
+
+  const [currency, setCurrency] = useState<"inr" | "usd">("inr");
 
   const defaultAmounts = [100, 250, 500];
 
@@ -82,9 +90,32 @@ const App: NextPage = () => {
             feel free to support me with a donation!
           </Text>
 
+          <Flex justifyContent="center">
+            <Menu>
+              <MenuButton
+                as={Button}
+                w="24"
+                rightIcon={<IoIosArrowDown size={22} />}
+                display="flex"
+                alignItems="center"
+                columnGap="-1"
+              >
+                {currency.toUpperCase()}
+              </MenuButton>
+              <MenuList>
+                <MenuItem onClick={() => setCurrency("inr")}>INR</MenuItem>
+                <MenuItem onClick={() => setCurrency("usd")}>USD</MenuItem>
+              </MenuList>
+            </Menu>
+          </Flex>
+
           <InputGroup mt="2">
             <InputLeftAddon>
-              <BiRupee size="24" />
+              {currency === "inr" ? (
+                <BiRupee size="24" />
+              ) : (
+                <IoLogoUsd size="22" />
+              )}
             </InputLeftAddon>
             <Input
               w="80"
@@ -123,7 +154,7 @@ const App: NextPage = () => {
               w="80"
               isLoading={loading}
               onClick={handleClick}
-              disabled={ amount ? false : true }
+              disabled={amount ? false : true}
             >
               checkout
             </Button>
