@@ -50,8 +50,8 @@ const App: NextPage = () => {
   return (
     <>
       <Box
-        minH="100vh"
-        minW="100vw"
+        height="100vh"
+        overflowX="hidden"
         bgGradient="linear(to-l, #531CB3, #944BBB)"
         display="flex"
         justifyContent="center"
