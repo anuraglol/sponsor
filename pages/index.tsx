@@ -61,11 +61,11 @@ const App: NextPage = () => {
         <Box
           bgColor="white"
           rounded="md"
-          py="12"
-          px="28"
+          py={{ base: "4", sm: "6", md: "8", lg: "10", xl: "12" }}
+          px={{ base: "6", sm: "14", md: "16", lg: "18", xl: "20" }}
           display="flex"
           flexDir="column"
-          rowGap={4}
+          gap="4"
           justifyContent="center"
         >
           <Text
@@ -87,7 +87,7 @@ const App: NextPage = () => {
               <BiRupee size="24" />
             </InputLeftAddon>
             <Input
-              w="80"
+              w={{ base: "64", md: "72", lg: "80" }}
               type="number"
               placeholder="enter an amount..."
               value={amount}
@@ -98,8 +98,10 @@ const App: NextPage = () => {
           <HStack w="full" spacing="4" justifyContent="center">
             {defaultAmounts?.map((btnAmount: number) => (
               <Box
-                py="1"
+                h="8"
                 px="6"
+                display="grid"
+                placeItems="center"
                 rounded="full"
                 fontSize="lg"
                 fontWeight="500"
@@ -120,10 +122,10 @@ const App: NextPage = () => {
               colorScheme="purple"
               textColor="white"
               fontWeight="medium"
-              w="80"
+              w={{ base: "52", md: "64", lg: "72", xl: "80" }}
               isLoading={loading}
               onClick={handleClick}
-              disabled={ amount ? false : true }
+              disabled={amount ? false : true}
             >
               checkout
             </Button>
