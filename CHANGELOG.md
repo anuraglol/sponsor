@@ -1,3 +1,12 @@
+## [1.5.3](https://github.com/kr-anurag/sponsor/compare/v1.5.2...v1.5.3) (2022-04-12)
+
+
+### Bug Fixes
+
+* fix responsiveness ([55c4781](https://github.com/kr-anurag/sponsor/commit/55c47814056b47ba68209939b8fc54e3c9f6ba82))
+
+
+
 ## [1.5.2](https://github.com/kr-anurag/sponsor/compare/v1.5.1...v1.5.2) (2022-03-12)
 
 
@@ -31,16 +40,6 @@
 ### Bug Fixes
 
 * fix font ([a67543a](https://github.com/kr-anurag/sponsor/commit/a67543aed0e015d882a6b624e408515f9169dc41))
-
-
-
-## [1.4.2](https://github.com/kr-anurag/sponsor/compare/v1.4.1...v1.4.2) (2022-02-02)
-
-
-### Bug Fixes
-
-* chakra ui ([ab3a61c](https://github.com/kr-anurag/sponsor/commit/ab3a61cf5e13ab4ecf30c4af4c7789ef35e0c3d1))
-* success page ([21816e4](https://github.com/kr-anurag/sponsor/commit/21816e4e31437098bd2c6ddc1a964789c0481712))
 
 
 
