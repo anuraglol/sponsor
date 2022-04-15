@@ -33,8 +33,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           ],
         }}
         twitter={{
-          handle: "@kr_anurag_",
-          site: "@kr_anurag_",
+          handle: "@imanuraglol",
+          site: "@imanuraglol",
           cardType: "summary_large_image",
         }}
       />
