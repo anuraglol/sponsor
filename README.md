@@ -17,7 +17,7 @@ This is a sponsor page built with Stripe to accept donations.
 
 - [Portfolio](https://anurag.tech)
 - [Github](https://github.com/kr-anurag)
-- [Twitter](https://twitter.com/kr_anurag_)
+- [Twitter](https://twitter.com/imanuraglol)
 - [Sponsor Me!](https://sponsor.anurag.tech)
 
 Feel free to use this as a template too! Show some love by dropping a star ⭐
